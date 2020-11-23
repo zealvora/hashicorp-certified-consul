@@ -1,0 +1,33 @@
+Pre-Requisite: Running Consul Server and Consul Client.
+
+Step 1: Create Service Definiton
+
+cd /etc/conusl.d/
+
+nano web.json
+
+{
+  "service": {
+    "name": "web",
+    "port": 80
+  }
+}
+
+chown consul.consul web.json
+consul validate /etc/consul.d
+consul reload
+
+Step 2: Finding a service:
+
+2.1 DNS Interface:
+
+yum -y install bind-utils
+
+dig @SERVER-IP -p 8600 web.service.consul
+dig @SERVER-IP -p 8600 web.service.consul SRV
+
+
+2.2 API Interface:
+
+curl http://localhost:8500/v1/catalog/services
+curl http://localhost:8500/v1/catalog/service/web

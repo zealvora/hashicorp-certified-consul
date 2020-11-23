@@ -1,0 +1,65 @@
+Documentation Referred:
+
+https://www.consul.io/api-docs/query
+
+Step 1: Create two services
+
+cd /etc/consul.d
+
+Service 1:
+
+nano web-1.json
+
+{
+  "service": {
+    "name": "web",
+     "id": "web1",
+    "port": 8080,
+    "tags": ["v1"]
+  }
+}
+
+Service 2:
+
+nano web-2.json
+
+{
+  "service": {
+    "name": "web",
+    "id":   "web2",
+    "port": 9080,
+    "tags": ["v2"]
+  }
+}
+
+consul reload
+
+
+Use-Case 1: Creating a basic prepared query:
+
+cd /tmp
+nano prepared-query.json
+
+{
+  "Name": "web-service",
+  "Service": {
+    "Service": "web",
+    "Tags": ["v2"]
+  }
+}
+
+curl --request POST --data @prepared-query.json http://127.0.0.1:8500/v1/query
+
+dig @localhost -p 8600 web-service.query.consul SRV
+
+List Prepared Query:
+
+curl http://127.0.0.1:8500/v1/query
+
+Update Prepared Query:
+
+curl --request PUT --data @prepared-query.json http://127.0.0.1:8500/v1/query/4de2cfbc-7c58-c4d4-8b39-ba39a7f765c8
+
+Deleted Prepared Query:
+
+curl --request DELETE http://127.0.0.1:8500/v1/query/:uuid

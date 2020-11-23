@@ -1,0 +1,50 @@
+Documentation:
+
+https://www.consul.io/docs/security/acl/acl-rules
+
+Step 1: Writing Demo Policies:
+
+key_prefix "mobiles/" {
+  policy = "read"
+}
+
+
+Step 2: Add an Explict Deny:
+key_prefix "mobiles/samsung" {
+  policy = "deny"
+}
+
+
+Step 2: Wildcard based access
+
+key_prefix "" {
+  policy = "read"
+}
+
+
+
+
+
+
+
+
+tokens {
+    "agent" = "ebef9f7d-6d20-0df0-1b77-faf122fad6c0"
+  }
+
+
+
+{
+  "service": {
+    "name": "web",
+    "port": 80,
+    "token": "931d9fc3-ae0d-43d0-3ef5-ef9a0fe8e78c"
+    "check": {
+    "args": [
+        "curl",
+        "127.0.0.1"
+      ],
+      "interval": "10s"
+    }
+  }
+}

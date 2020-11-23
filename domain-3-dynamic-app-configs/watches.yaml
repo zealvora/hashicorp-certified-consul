@@ -1,0 +1,23 @@
+Basic Watch Command:
+
+consul watch -type=key -key=max_memory
+
+Invoking an Handler:
+
+mkdir /root/tmp-consul
+cd /root/tmp-consul
+nano myscript.sh
+
+#!/usr/bin/env sh
+while read watch
+do
+    echo $watch
+done
+
+chmod +x myscript.sh
+consul watch -type=key -key=max_memory ./myscript.sh
+echo MTAyNE1C | base64 -d
+
+Checks Critical Checks:
+
+consul watch -type checks -state critical

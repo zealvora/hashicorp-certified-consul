@@ -1,0 +1,42 @@
+Use-Case 2 Static Failover Policy:
+
+Singapore DC:
+
+cd /etc/consul.d
+nano db.json
+
+{
+  "service": {
+    "name": "database",
+    "port": 5080,
+    "tags": ["v1"]
+  }
+}
+
+consul reload
+
+India DC:
+
+cd /tmp
+
+nano failover.json
+
+{
+  "Name": "failover",
+  "Service": {
+    "Service": "database",
+    "Tags": ["v1"],
+    "Failover": {
+      "Datacenters": ["singapore"]
+    }
+  }
+}
+
+curl --request POST --data @failover.json http://127.0.0.1:8500/v1/query
+
+
+Verification:
+
+India DC:
+
+dig @localhost -p 8600 failover.query.consul SRV

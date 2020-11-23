@@ -1,0 +1,19 @@
+Service Policy:
+
+Policy:
+
+service "web" {
+  policy = "write"
+}
+
+{
+  "service": {
+    "name": "web",
+    "port": 80,
+    "token": "931d9fc3-ae0d-43d0-3ef5-ef9a0fe8e78c"
+  }
+}
+https://katacoda.com/danielehc
+
+journalctl --rotate
+journalctl --vacuum-time=1s

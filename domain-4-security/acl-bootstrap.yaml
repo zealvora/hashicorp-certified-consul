@@ -1,0 +1,23 @@
+Step 1: Enabling ACLs
+
+cd /etc/consul.d
+
+nano agent.hcl
+
+acl = {
+  enabled = true
+  default_policy = "deny"
+  enable_token_persistence = true
+}
+
+Step 2: Create Bootstrap Token
+
+consul acl bootstrap
+
+Approach 1: Using Tokens with CLI Command
+
+consul members -token "TOKEN-HERE"
+
+Approach 2: Using Environement Variables
+
+export CONSUL_HTTP_TOKEN=3a2c3d17-a6db-03db-a89b-15419aab68b1

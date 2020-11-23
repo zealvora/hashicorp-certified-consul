@@ -1,0 +1,18 @@
+
+Store & Retreive Data in KV:
+
+consul kv put max_memory 512M
+consul kv get max_memory
+
+List all the keys in the store using the recurse:
+
+consul kv get -recurse
+
+Updating Existing Values:
+
+consul kv put max_memory 1024M
+consul kv get max_memory
+
+Deleting Data:
+
+consul kv delete max_memory

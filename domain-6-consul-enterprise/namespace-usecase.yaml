@@ -1,0 +1,55 @@
+
+Pre-Requisite: Create two namespaces named alice-team and bob-team
+
+nano alice-team.hcl
+name = "alice-team"
+
+consul namespace write alice-team.hcl
+
+nano bob-team.hcl
+name = "bob-team"
+
+consul namespace write bob-team.hcl
+
+Step 1 Create Service for Bob Team:
+
+nano web-bob.hcl
+
+service {
+  name = "web-service"
+  port = 8080
+  namespace = "bob-team"
+}
+
+Step 2 Create Service for Alice Team:
+
+nano web-bob.hcl
+
+service {
+  name = "web-service"
+  port = 9080
+  namespace = "alice-team"
+}
+
+rm -f alice-team.hcl bob-team.hcl
+consul reload
+
+Step 3 Create Service for Default Namespace:
+
+web-default.hcl
+
+service {
+  name = "web-service"
+  port = 1080
+}
+
+
+
+DNS Interface:
+
+<service-name>.service.<datacenter>.consul  << Default
+<service-name>.service.<namespace>.<datacenter>.consul
+
+dig @localhost -p 8600 web-service.service.consul SRV
+dig @localhost -p 8600 web-service.service.alice-team.dc1.consul SRV
+dig @localhost -p 8600 web-service.service.bob-team.dc1.consul SRV

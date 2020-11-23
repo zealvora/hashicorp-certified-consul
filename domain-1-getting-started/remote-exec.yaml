@@ -1,0 +1,2 @@
+
+consul agent -join 134.209.155.89 -bind 165.22.222.190 -data-dir /root/consul -hcl 'disable_remote_exec=false'
