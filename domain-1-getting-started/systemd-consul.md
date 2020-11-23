@@ -1,28 +1,32 @@
-Older consul.hcl file in /root/consul-new-config
 
-start_join = ["134.209.155.89"]
-bind_addr = "165.22.222.190"
-data_dir = "/root/consul"
-
+#### Backing up the default consul config:
+```sh
 cd /etc/consul.d
 mv consul.hcl consul.hcl.bak
-cp /root/consul-new-config/consul.hcl .
-chown consul.consul consul.hcl
-
-systemctl start consul
-systemctl status consul
-journalctl -u consul
-
-Updating the consul.hcl file with new data directory
-
-start_join = ["134.209.155.89"]
-bind_addr = "165.22.222.190"
+```
+#### Add new consul configuration:
+```sh
+nano consul.hcl
+```
+```sh
+start_join = ["SERVER-IP"]
+bind_addr = "CURRENT-NODE-IP"
 data_dir = "/etc/consul.d/consul-dir"
+```
+```sh
+chown consul.consul consul.hcl
+```
 
-Verification Stage:
-
-systemctl restart consul
+#### Verification Stage:
+```sh
+systemctl start consul
 systemctl status consul
 systemctl enable consul
 reboot
 systemctl status consul
+```
+
+### To check the logs:
+```sh
+journalctl -u consul
+```

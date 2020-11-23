@@ -3,7 +3,6 @@
 This is a central document which contains all the commands and code files used throughout the video course.
 
 
-
 # Exam Domains
 
 | Domain | Document Link |
@@ -16,10 +15,9 @@ This is a central document which contains all the commands and code files used t
 | 6 | [Consul Enterprise][PlDg] |
 
 
-   [PlDa]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%201%20-%20Core%20Concepts>
-   [PlDb]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%202%20-%20Workloads%20%26%20Scheduling>
-   [PlDc]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%203%20-%20Services%20and%20Networking>
-   [PlDe]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%204%20-%20Security>
-   [PlDf]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%205%20-%20Storage>
-   [PlDg]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%206%20-%20Cluster%20Architecture%2C%20Installation%20%26%20Configuration>
-   [PlDi]: <https://github.com/zealvora/certified-kubernetes-administrator/tree/master/Domain%207%20-%20Troubleshooting>
+   [PlDa]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started>
+   [PlDb]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-2-service-discovery>
+   [PlDc]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-3-dynamic-app-configs>
+   [PlDe]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security>
+   [PlDf]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability>
+   [PlDg]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-6-consul-enterprise>

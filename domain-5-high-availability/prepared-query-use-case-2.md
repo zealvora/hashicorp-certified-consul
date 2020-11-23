@@ -1,10 +1,11 @@
-Use-Case 2 Static Failover Policy:
+### Use-Case 2 Static Failover Policy:
 
-Singapore DC:
-
+#### Singapore DC:
+```sh
 cd /etc/consul.d
 nano db.json
-
+```
+```sh
 {
   "service": {
     "name": "database",
@@ -12,15 +13,16 @@ nano db.json
     "tags": ["v1"]
   }
 }
-
+```
+```sh
 consul reload
-
-India DC:
-
+```
+#### India DC:
+```sh
 cd /tmp
-
 nano failover.json
-
+```
+```sh
 {
   "Name": "failover",
   "Service": {
@@ -31,12 +33,14 @@ nano failover.json
     }
   }
 }
-
+```
+```sh
 curl --request POST --data @failover.json http://127.0.0.1:8500/v1/query
+```
 
-
-Verification:
+#### Verification:
 
 India DC:
-
+```sh
 dig @localhost -p 8600 failover.query.consul SRV
+```

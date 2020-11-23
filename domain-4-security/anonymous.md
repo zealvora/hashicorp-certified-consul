@@ -1,6 +1,5 @@
 
-# UI Access:
-
+```sh
 service_prefix "" {
   policy = "read"
 }
@@ -10,3 +9,4 @@ key_prefix "" {
 node_prefix "" {
   policy = "read"
 }
+```
