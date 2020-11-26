@@ -4,7 +4,7 @@ This is a central document which contains all the commands and code files used t
 
 https://www.udemy.com/course/hashicorp-certified-consul-associate/?couponCode=AWESOME-CONSUL
 
-# Exam Domains
+# Video-Document Mapper
 
 | Domain | Document Link |
 | ------ | ------ |
