@@ -9,7 +9,7 @@ bootstrap_expect = 1
 node_name = "consul-server"
 ui = true
 server = true
-
+```
 #### consul-client:
 cat consul.hcl
 ```sh
@@ -72,7 +72,7 @@ systemctl restart consul
 encrypt = "ER5awGvrbkd25fO67Q4SktzZwSwR/F2SFQMExXmFlUE=",
 encrypt_verify_incoming = true,
 encrypt_verify_outgoing = true
-
+```
 ```sh
 systemctl restart consul
 ```
