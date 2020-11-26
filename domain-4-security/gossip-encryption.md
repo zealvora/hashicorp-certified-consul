@@ -18,7 +18,6 @@ nano consul.hcl
 ```
 ```sh
 encrypt = "KEY-HERE"
-encrypt = "SPBa2189ULF+N4YbgnFSYavILQkbDa8qjA968yQJZqw="
 ```
 #### Step 3: Start & Verify Agent
 ```sh

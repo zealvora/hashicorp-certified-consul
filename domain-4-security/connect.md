@@ -11,7 +11,8 @@ systemctl stop consul
 yum -y install nginx
 ```
 ```sh
-cd /etc/nginx/conf.d/services.conf
+cd /etc/nginx/conf.d/
+nano services.conf
 ```
 ```sh
 server {

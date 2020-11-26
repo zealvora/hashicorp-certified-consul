@@ -13,7 +13,8 @@ The code mentioned in this document are used in the HashiCorp Certified Consul A
 | 4 | [Prepared Query Use Case 2 - Failover Policy][PlDd] |
 | 5 | [Backup and Restore][PlDe] |
 | 6 | [Overview of AutoPilot][PlDf] |
-
+| 6 | [Automatically Joining Servers][PlDg] |
+| 6 | [Cloud AutoJoin][PlDh] |
 
 
 
@@ -23,3 +24,5 @@ The code mentioned in this document are used in the HashiCorp Certified Consul A
 [PlDd]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability/prepared-query-use-case-2.md>
 [PlDe]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability/backup-restore.md>
 [PlDf]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability/autopilot.md>
+[PlDg]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability/joining-servers.md>
+[PlDh]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-5-high-availability/cloud-auto-join.md>

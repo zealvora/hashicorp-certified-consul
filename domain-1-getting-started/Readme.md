@@ -21,6 +21,6 @@ The code mentioned in this document are used in the HashiCorp Certified Consul A
 [PlDc]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/joining-client.md>
 [PlDd]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/remote-exec.md>
 [PlDe]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/config-file.md>
-[PlDf]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/leave-behaviour.md>
+[PlDf]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/leave-behaviour.md>
 [PlDg]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/server-mode.md>
 [PlDh]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-1-getting-started/systemd-consul.md>

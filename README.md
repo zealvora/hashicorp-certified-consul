@@ -2,6 +2,7 @@
 
 This is a central document which contains all the commands and code files used throughout the video course.
 
+https://www.udemy.com/course/hashicorp-certified-consul-associate/?couponCode=AWESOME-CONSUL
 
 # Exam Domains
 
