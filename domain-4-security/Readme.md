@@ -15,8 +15,9 @@ The code mentioned in this document are used in the HashiCorp Certified Consul A
 | 5 | [Enabling ACLs on Agent][PlDf] |
 | 6 | [Gossip Encryption in Consul][PlDg] |
 | 6 | [Gossip Encryption in Existing Datacenter][PlDh] |
-| 7 | [RPC Encryption with TLS][PlDi] |
-| 8 | [HTTP API in Consul][PlDj] |
+| 7 | [Rotating Gossip Encryption Keys][PlDi] |
+| 8 | [RPC Encryption with TLS][PlDj] |
+| 9 | [HTTP API in Consul][PlDk] |
 
 
 
@@ -28,5 +29,6 @@ The code mentioned in this document are used in the HashiCorp Certified Consul A
 [PlDf]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/node-acl.md>
 [PlDg]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/gossip-encryption.md>
 [PlDh]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/gossip-existing-dc.md>
-[PlDi]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/rpc-encryption.md>
-[PlDj]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/http-api.md>
+[PlDi]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/rotate-gossip-keys.md>
+[PlDj]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/rpc-encryption.md>
+[PlDk]: <https://github.com/zealvora/hashicorp-certified-consul/blob/main/domain-4-security/http-api.md>
